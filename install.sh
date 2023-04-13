@@ -12,8 +12,8 @@ echo "Install packages"
 DEBIAN_FRONTEND=noninteractive \
 apt-get install --yes -qq --no-install-recommends --no-install-suggests \
   odbc-postgresql \
-  unixODBC \
-  unixODBC-dev \
+  unixodbc \
+  unixodbc-dev \
   wget \
   iputils-ping \
   vim \
