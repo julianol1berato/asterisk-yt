@@ -166,7 +166,7 @@ echo "---------- END build ----------"
   ./configure --prefix=/usr --with-bcg729 --enable-penryn && \
   make && \
   make install && \
-  ldconfig ;fi && \
+  ldconfig && \
   cd /usr/src && \
   mkdir sngrep && \
   curl -fSL --connect-timeout 30 https://github.com/irontec/sngrep/archive/v1.6.0.tar.gz | tar xz --strip 1 -C sngrep && \
