@@ -3,7 +3,7 @@
 ## customizações de terminal e log
 
 apt update && apt upgrade -y
-apt install wget curl vim atop htop nmap whowatch mtr htop rsync acl locate rcconf ethtool screen lshw hdparm ttyrec tcpdump auditd sudo mpg123 sox make gcc g++ openssh-server libsox-fmt-base dialog unzip autoconf -y
+apt install wget curl vim atop htop nmap whowatch mtr htop rsync acl locate ethtool screen lshw hdparm ttyrec tcpdump auditd sudo openssh-server libsox-fmt-base dialog unzip autoconf -y
 
 
 echo 'HISTTIMEFORMAT="%d/%m/%Y - %T => "' >> ~/.bashrc
