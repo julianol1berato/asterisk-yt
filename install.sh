@@ -73,6 +73,7 @@ cd /usr/src/asterisk
 curl -sL http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-20-current.tar.gz | tar --strip-components 1 -xz
 echo "Install source mp3"
 ./contrib/scripts/get_mp3_source.sh && \
+contrib/scripts/install_prereq install && \
 ./configure --prefix=/usr --libdir=/usr/lib --with-pjproject-bundled --with-jansson-bundled --with-resample --with-ssl=ssl --with-srtp > /dev/null
 : ${JOBS:=$(( $(nproc) + $(nproc) / 2 ))}
 
@@ -203,8 +204,7 @@ sudo chown -R asterisk.asterisk /usr/lib/asterisk
 chmod -R 750 /var/spool/asterisk
 
 cd /
-rm -rf /usr/src/asterisk \
-       /usr/src/codecs
+rm -rf /usr/src/codecs
 
 DEVPKGS="$(dpkg -l | grep '\-dev' | awk '{print $2}' | xargs)"
 DEBIAN_FRONTEND=noninteractive apt-get --yes -qq purge \
