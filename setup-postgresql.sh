@@ -20,17 +20,7 @@ cd contrib/ast-db-manage
 mv config.ini.sample config.ini
 
 
-apt install python3-pip
-pip install alembic
-pip install psycopg2-binary
 
-pip install mysql-connector-python
-
-apt install python3-pymysql/stable python3-mysqldb/stable
-pip install mysqlclient
-pip install "importlib_metadata==1.5.2"
-pip install "zipp==1.2.0"
-pip install "configparser==3.8.1"
 
 mysql -u root 
 /usr/bin/mysql_secure_installation
