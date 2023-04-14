@@ -12,6 +12,7 @@ echo "Install packages"
 DEBIAN_FRONTEND=noninteractive \
 apt-get install --yes -qq --no-install-recommends --no-install-suggests \
   odbc-postgresql \
+  aptitude \
   mpg123 \
   sox \
   make \
