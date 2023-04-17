@@ -15,21 +15,21 @@ Git dedicado as aulas do YT.
 ``` curl -L https://ln.bashtech.com.br/setup-terminal.sh | bash ```
 - [Revisão instalação do Asterisk 20 LTS via script](install.sh)<br /> 
 ###### Instalação Asterisk - Material Extra
-> mkdir /tmp/ && cd /tmp/ && curl -fsSL https://github.com/julianol1berato/asterisk-yt/releases/download/filesconfig/asterisk.tar -o asterisk.tar && tar xvf asterisk.tar
+``` mkdir /tmp/ && cd /tmp/ && curl -fsSL https://github.com/julianol1berato/asterisk-yt/releases/download/filesconfig/asterisk.tar -o asterisk.tar && tar xvf asterisk.tar ```
 
 **-> config**<br /> 
 ```
-/etc/odbc.ini<br /> 
-/etc/odbcinst.ini<br /> 
-/etc/asterisk/res_odbc.conf<br /> 
-/etc/asterisk/res_pgsql.conf<br /> 
-/etc/asterisk/sorcery.conf<br /> 
-/etc/asterisk/extconfig.conf<br /> 
-/etc/asterisk/cdr.conf<br /> 
-/etc/asterisk/cdr_adaptive_odbc.conf<br /> 
-/etc/asterisk/cel_odbc.conf<br /> 
-/etc/asterisk/cel.conf<br /> 
-/etc/asterisk/cel_pgsql.conf<br /> 
+/etc/odbc.ini
+/etc/odbcinst.ini
+/etc/asterisk/res_odbc.conf
+/etc/asterisk/res_pgsql.conf
+/etc/asterisk/sorcery.conf
+/etc/asterisk/extconfig.conf
+/etc/asterisk/cdr.conf
+/etc/asterisk/cdr_adaptive_odbc.conf
+/etc/asterisk/cel_odbc.conf
+/etc/asterisk/cel.conf
+/etc/asterisk/cel_pgsql.conf
 ```
 - [Limpeza de arquivos não usados no Asterisk](cleanfiles-asterisk.sh)<br />  
 ``` curl -L https://ln.bashtech.com.br/clean-asterisk.sh | bash ```
@@ -37,19 +37,19 @@ Git dedicado as aulas do YT.
 ``` curl -L https://ln.bashtech.com.br/setup-mysqlasterisk.sh | bash ```
 ###### MySQL - Material Extra
 ```
-vim /usr/src/asterisk/contrib/ast-db-manage/config.ini<br /> 
-/usr/bin/mysql_secure_installation<br /> 
-mysql -u root <br /> 
-CREATE USER 'asterisk'@'localhost' IDENTIFIED BY '123456';<br /> 
-CREATE DATABASE asterisk;<br /> 
-GRANT ALL privileges on asterisk.* to 'asterisk'@'localhost' identified by '123456';<br /> 
-FLUSH privileges;<br /> 
+vim /usr/src/asterisk/contrib/ast-db-manage/config.ini
+/usr/bin/mysql_secure_installation
+mysql -u root
+CREATE USER 'asterisk'@'localhost' IDENTIFIED BY '123456';
+CREATE DATABASE asterisk;
+GRANT ALL privileges on asterisk.* to 'asterisk'@'localhost' identified by '123456';
+FLUSH privileges;
 
 alembic -c config.ini upgrade head
 
-show databases;<br /> 
-use asterisk;<br /> 
-show tables;<br /> 
+show databases;
+use asterisk;
+show tables;
 ```
 
 - [Download Release asterisk-configfiles.tar](https://github.com/julianol1berato/asterisk-yt/releases/tag/filesconfig)
