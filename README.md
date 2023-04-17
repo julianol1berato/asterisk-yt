@@ -18,6 +18,7 @@ Git dedicado as aulas do YT.
 > mkdir /tmp/ && cd /tmp/ && curl -fsSL https://github.com/julianol1berato/asterisk-yt/releases/download/filesconfig/asterisk.tar -o asterisk.tar && tar xvf asterisk.tar
 
 **-> config**<br /> 
+```
 /etc/odbc.ini<br /> 
 /etc/odbcinst.ini<br /> 
 /etc/asterisk/res_odbc.conf<br /> 
@@ -29,7 +30,7 @@ Git dedicado as aulas do YT.
 /etc/asterisk/cel_odbc.conf<br /> 
 /etc/asterisk/cel.conf<br /> 
 /etc/asterisk/cel_pgsql.conf<br /> 
-
+```
 - [Limpeza de arquivos não usados no Asterisk](cleanfiles-asterisk.sh)<br />  
 > curl -L https://ln.bashtech.com.br/clean-asterisk.sh | bash
 - [Instalação do MySql e bibliotecas para utilizar com o Asterisk](setup-mysqlasterisk.sh)<br /> 
