@@ -24,5 +24,6 @@ Git dedicado as aulas do YT.
 - Criar URA de três níveis
 - Criar fila de atendimento
 - Apresentar relatórios CEL, CDR e QUEUE_LOG no banco.
-Video: [![Canal Youtube @analistabash](https://www.bashtech.com.br/youtube_button_icon_151827_96x.png)](https://www.youtube.com/watch?v=2otkd-7HGk0&list=PLk0v4L7lcjDfcKUxIDybvuKTgDuaR31Kn)
+
+*Video:* [![Canal Youtube @analistabash](https://www.bashtech.com.br/youtube_button_icon_151827_96x.png)](https://www.youtube.com/watch?v=2otkd-7HGk0&list=PLk0v4L7lcjDfcKUxIDybvuKTgDuaR31Kn)
 
