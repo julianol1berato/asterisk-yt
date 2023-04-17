@@ -1,6 +1,11 @@
 # asterisk-yt
 Git dedicado as aulas do YT.
 
+- [Canal YouTube®](https://www.youtube.com/@analistabash)
+
+
+
+
 ###### Aula 1:
 - Customização Terminal - **terminal_custom.sh** - [Revisão instalação customização terminal](terminal_custom.sh)
 - Aula 1 - **install.sh** - Instalação do Asterisk 20 LTS - [Instalação do Asterisk 20 LTS via script](install.sh)
@@ -13,3 +18,4 @@ Git dedicado as aulas do YT.
 ###### Aula 3
 - 
 
+![alt text](https://cdn.icon-icons.com/icons2/2530/PNG/512/youtube_button_icon_151827.png)
