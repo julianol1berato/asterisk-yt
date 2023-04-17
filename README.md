@@ -35,7 +35,7 @@ Git dedicado as aulas do YT.
 - [Instalação do MySql e bibliotecas para utilizar com o Asterisk](setup-mysqlasterisk.sh)<br /> 
 > curl -L https://ln.bashtech.com.br/setup-mysqlasterisk.sh | bash
 ###### MySQL - Material Extra
-´´´ 
+```
 vim /usr/src/asterisk/contrib/ast-db-manage/config.ini<br /> 
 /usr/bin/mysql_secure_installation<br /> 
 mysql -u root <br /> 
@@ -49,7 +49,7 @@ alembic -c config.ini upgrade head
 show databases;<br /> 
 use asterisk;<br /> 
 show tables;<br /> 
-´´´
+```
 
 - [Download Release asterisk-configfiles.tar](https://github.com/julianol1berato/asterisk-yt/releases/tag/filesconfig)
 ## Aula 3
