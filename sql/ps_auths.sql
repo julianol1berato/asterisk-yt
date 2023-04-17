@@ -1,2 +1,2 @@
-insert into MY_TABLE (id, auth_type, nonce_lifetime, md5_cred, password, realm, username, refresh_token, oauth_clientid, oauth_secret) values ('1001', 'userpass', 32, null, '1234qwerrty564', null, '1001', null, null, null);
-insert into MY_TABLE (id, auth_type, nonce_lifetime, md5_cred, password, realm, username, refresh_token, oauth_clientid, oauth_secret) values ('1002', 'userpass', 32, null, '1234qwerrty564', null, '1002', null, null, null);
+insert into ps_auths (id, auth_type, nonce_lifetime, md5_cred, password, realm, username, refresh_token, oauth_clientid, oauth_secret) values ('1001', 'userpass', 32, null, '1234qwerrty564', null, '1001', null, null, null);
+insert into ps_auths (id, auth_type, nonce_lifetime, md5_cred, password, realm, username, refresh_token, oauth_clientid, oauth_secret) values ('1002', 'userpass', 32, null, '1234qwerrty564', null, '1002', null, null, null);

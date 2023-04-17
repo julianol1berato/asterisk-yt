@@ -4,7 +4,7 @@ Git dedicado as aulas do YT.
 [![Canal Youtube @analistabash](https://www.bashtech.com.br/youtube_button_icon_151827_96x.png)](https://www.youtube.com/@analistabash)
 
 
-- Dump MySQL -
+- [DUMP Database](sql/dump-mysql.sql)
 
 
 ###### Aula 1:
@@ -18,7 +18,7 @@ Git dedicado as aulas do YT.
 - [Download Release asterisk-configfiles.tar](https://github.com/julianol1berato/asterisk-yt/releases/tag/filesconfig)
 ###### Aula 3
 - Criação de Tronco no Asterisk
-- Criuar conta em operadora DID
+- Criar conta em operadora DID
 - Testar comunicação de ramal e operadora (tronco)
 - Montar dialplan para teste com gravação do audio
 - Criar URA de três níveis

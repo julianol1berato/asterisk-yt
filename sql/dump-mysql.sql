@@ -1,8 +1,5 @@
-create table asterisk.alembic_version_config
-(
-    version_num varchar(32) not null
-        primary key
-);
+create database asterisk;
+
 
 create table asterisk.extensions
 (
