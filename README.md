@@ -16,19 +16,20 @@ Git dedicado as aulas do YT.
 - [Limpeza de arquivos não usados no Asterisk](cleanfiles-asterisk.sh)
 - [Instalação do MySql e bibliotecas para utilizar com o Asterisk](setup-mysqlasterisk.sh)
 ###### MySQL - Material Extra
-vim contrib/ast-db-manage/config.ini
-/usr/bin/mysql_secure_installation
-mysql -u root 
-CREATE USER 'asterisk'@'localhost' IDENTIFIED BY '123456';
-CREATE DATABASE asterisk;
-GRANT ALL privileges on asterisk.* to 'asterisk'@'localhost' identified by '123456';
-FLUSH privileges;
+vim contrib/ast-db-manage/config.ini<br /> 
+/usr/bin/mysql_secure_installation<br /> 
+mysql -u root <br /> 
+CREATE USER 'asterisk'@'localhost' IDENTIFIED BY '123456';<br /> 
+CREATE DATABASE asterisk;<br /> 
+GRANT ALL privileges on asterisk.* to 'asterisk'@'localhost' identified by '123456';<br /> 
+FLUSH privileges;<br /> 
 
 alembic -c config.ini upgrade head
 
-show databases;
-use asterisk;
-show tables;
+show databases;<br /> 
+use asterisk;<br /> 
+show tables;<br /> 
+
 - [Download Release asterisk-configfiles.tar](https://github.com/julianol1berato/asterisk-yt/releases/tag/filesconfig)
 ## Aula 3
 - Criação de Tronco no Asterisk
