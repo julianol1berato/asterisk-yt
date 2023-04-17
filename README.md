@@ -1,5 +1,5 @@
-# asterisk-yt
-Git dedicado as aulas do YT.
+# Repositório das Aulas de Asterisk do YouTube - @AnalistaBash
+> Git dedicado as aulas do YouTube.
 
 [![Canal Youtube @analistabash](https://www.bashtech.com.br/youtube_button_icon_151827_96x.png)](https://www.youtube.com/@analistabash)
 
