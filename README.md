@@ -15,7 +15,7 @@ Git dedicado as aulas do YT.
 ``` curl -L https://ln.bashtech.com.br/setup-terminal.sh | bash ```
 - [Revisão instalação do Asterisk 20 LTS via script](install.sh)<br /> 
 ###### Instalação Asterisk - Material Extra
-``` mkdir /tmp/ && cd /tmp/ && curl -fsSL https://github.com/julianol1berato/asterisk-yt/releases/download/filesconfig/asterisk.tar -o asterisk.tar && tar xvf asterisk.tar ```
+``` cd /tmp/ && curl -fsSL https://github.com/julianol1berato/asterisk-yt/releases/download/filesconfig/asterisk.tar -o asterisk.tar && tar xvf asterisk.tar ```
 
 **-> config**<br /> 
 ```
