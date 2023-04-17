@@ -12,11 +12,33 @@ Git dedicado as aulas do YT.
 - Aula 1 - **install.sh** - Instalação do Asterisk 20 LTS - [Instalação do Asterisk 20 LTS via script](install.sh)
 ## Aula 2 
 - [Revisão instalação customização terminal](terminal_custom.sh)
+curl -L https://ln.bashtech.com.br/setup-terminal.sh | bash
 - [Revisão instalação do Asterisk 20 LTS via script](install.sh)
+curl -L https://ln.bashtech.com.br/setup-asterisk.sh | bash
+###### Instalação Asterisk - Material Extra
+> curl -fsSL https://github.com/julianol1berato/asterisk-yt/releases/download/filesconfig/asterisk.tar -o asterisk.tar && \
+> tar xvf asterisk.tar
+
+**-> config**
+/etc/odbc.ini
+/etc/odbcinst.ini
+/etc/asterisk/res_odbc.conf
+/etc/asterisk/res_pgsql.conf
+/etc/asterisk/sorcery.conf
+/etc/asterisk/extconfig.conf
+/etc/asterisk/cdr.conf
+/etc/asterisk/cdr_adaptive_odbc.conf
+/etc/asterisk/cel_odbc.conf
+/etc/asterisk/cel.conf
+/etc/asterisk/cel_pgsql.conf
+
+cdr show status
 - [Limpeza de arquivos não usados no Asterisk](cleanfiles-asterisk.sh)
+curl -L https://ln.bashtech.com.br/clean-asterisk.sh | bash
 - [Instalação do MySql e bibliotecas para utilizar com o Asterisk](setup-mysqlasterisk.sh)
+curl -L https://ln.bashtech.com.br/setup-mysqlasterisk.sh | bash
 ###### MySQL - Material Extra
-vim contrib/ast-db-manage/config.ini<br /> 
+vim /usr/src/asterisk/contrib/ast-db-manage/config.ini<br /> 
 /usr/bin/mysql_secure_installation<br /> 
 mysql -u root <br /> 
 CREATE USER 'asterisk'@'localhost' IDENTIFIED BY '123456';<br /> 
