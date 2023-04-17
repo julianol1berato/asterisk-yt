@@ -57,11 +57,9 @@ show tables;
 ## Aula 3
 - Criação de Tronco no Asterisk
 - Criar conta em operadora DID
-- Testar comunicação de ramal e operadora (tronco)
-- Montar dialplan para teste com gravação do audio
-- Criar URA de três níveis
+- Montar dialplan para teste
+- Criar URA
 - Criar fila de atendimento
-- Apresentar relatórios CEL, CDR e QUEUE_LOG no banco.
 
 *Video:* [![Canal Youtube @analistabash](https://www.bashtech.com.br/youtube_button_icon_151827_96x.png)](https://www.youtube.com/watch?v=2otkd-7HGk0&list=PLk0v4L7lcjDfcKUxIDybvuKTgDuaR31Kn)
 
