@@ -20,18 +20,17 @@ cd contrib/ast-db-manage
 mv config.ini.sample config.ini
 
 
-
-
-mysql -u root 
+vim contrib/ast-db-manage/config.ini
 /usr/bin/mysql_secure_installation
-CREATE USER 'asterisk'@'%' IDENTIFIED BY '123456';
+mysql -u root 
+CREATE USER 'asterisk'@'localhost' IDENTIFIED BY '123456';
 CREATE DATABASE asterisk;
 GRANT ALL privileges on asterisk.* to 'asterisk'@'localhost' identified by '123456';
 FLUSH privileges;
 
 alembic -c config.ini upgrade head
 
-##check tables
+show databases;
 use asterisk;
 show tables;
 
