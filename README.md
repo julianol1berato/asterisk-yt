@@ -1,7 +1,7 @@
 # asterisk-yt
 Git dedicado as aulas do YT.
 
-- [Canal YouTube®](https://www.youtube.com/@analistabash)
+![Canal Youtube @analistabash](https://www.bashtech.com.br/youtube_button_icon_151827_72x.png) [Canal YouTube®](https://www.youtube.com/@analistabash)
 
 
 
@@ -18,4 +18,3 @@ Git dedicado as aulas do YT.
 ###### Aula 3
 - 
 
-![alt text](https://cdn.icon-icons.com/icons2/2530/PNG/512/youtube_button_icon_151827.png)
