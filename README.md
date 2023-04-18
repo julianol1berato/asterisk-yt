@@ -31,6 +31,8 @@
 /etc/asterisk/cel_odbc.conf
 /etc/asterisk/cel.conf
 /etc/asterisk/cel_pgsql.conf
+/etc/asterisk/pjsip.conf
+
 ```
 - [Limpeza de arquivos não usados no Asterisk](cleanfiles-asterisk.sh)<br>
 ``` curl -L https://ln.bashtech.com.br/clean-asterisk.sh | bash ```
