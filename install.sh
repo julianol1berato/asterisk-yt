@@ -16,7 +16,8 @@ apt-get install --yes -qq --no-install-recommends --no-install-suggests \
   postgresql-contrib \
   postgresql-server-dev-15 \
   postgresql \
-  unixodbc-dev unixodbc 
+  unixodbc-dev unixodbc  \
+> /dev/null
 
 echo "Install packages"
 DEBIAN_FRONTEND=noninteractive \
@@ -163,7 +164,6 @@ make -j ${JOBS} all > /dev/null || make -j ${JOBS} all
 make install > /dev/null
 make install-headers > /dev/null
 make config > /dev/null
-make samples > /dev/null
 ldconfig
 echo "---------- END build ----------" 
 
