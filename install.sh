@@ -83,11 +83,12 @@ rm -rf /var/lib/apt/lists/*
 mkdir -p /usr/src/asterisk
 cd /usr/src/asterisk
 curl -sL http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-20-current.tar.gz | tar --strip-components 1 -xz
+
+
 echo "Install source mp3"
-./contrib/scripts/get_mp3_source.sh && \
-contrib/scripts/install_prereq install && \
+./contrib/scripts/get_mp3_source.sh > /dev/null
+contrib/scripts/install_prereq install > /dev/null
 ./configure --prefix=/usr --libdir=/usr/lib --with-pjproject-bundled --with-jansson-bundled --with-resample --with-ssl=ssl --with-srtp > /dev/null
-: ${JOBS:=$(( $(nproc) + $(nproc) / 2 ))}
 
 make menuselect/menuselect menuselect-tree menuselect.makeopts && \
   menuselect/menuselect \
@@ -160,7 +161,7 @@ menuselect/menuselect \
     --disable res_config_sqlite3 \
     --disable res_phoneprov \
     --disable res_pjsip_phoneprov_provider
-make -j ${JOBS} all > /dev/null || make -j ${JOBS} all
+    
 make install > /dev/null
 make install-headers > /dev/null
 make config > /dev/null
