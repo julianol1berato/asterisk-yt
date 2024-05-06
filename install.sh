@@ -8,6 +8,16 @@ echo "Update System"
 DEBIAN_FRONTEND=noninteractive \
 apt-get update -qq
 
+
+echo "installing postgres base"
+
+apt-get install --yes -qq --no-install-recommends --no-install-suggests \
+  postgresql-client \
+  postgresql-contrib \
+  postgresql-server-dev-15 \
+  postgresql \
+  unixodbc-dev unixodbc 
+
 echo "Install packages"
 DEBIAN_FRONTEND=noninteractive \
 apt-get install --yes -qq --no-install-recommends --no-install-suggests \
