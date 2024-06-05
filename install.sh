@@ -202,6 +202,8 @@ echo "---------- END build ----------"
 
 sed -i -E 's/^;(run)(user|group)/\1\2/' /etc/asterisk/asterisk.conf
 
+
+echo "instalando codecs"
 mkdir -p /usr/src/codecs/opus
 cd /usr/src/codecs/opus
 curl -sL http://downloads.digium.com/pub/telephony/codec_opus/asterisk-16.0/x86-64/codec_opus-16.0_current-x86_64.tar.gz | tar xz --strip 1 
@@ -214,9 +216,9 @@ mkdir -p /etc/asterisk/ \
 sudo groupadd asterisk
 sudo useradd -r -d /var/lib/asterisk -g asterisk asterisk
 sudo usermod -aG audio,dialout asterisk
-sudo chown -R asterisk.asterisk /etc/asterisk
-sudo chown -R asterisk.asterisk /var/{lib,log,spool}/asterisk
-sudo chown -R asterisk.asterisk /usr/lib/asterisk
+sudo chown -R asterisk:asterisk /etc/asterisk
+sudo chown -R asterisk:asterisk /var/{lib,log,spool}/asterisk
+sudo chown -R asterisk:asterisk /usr/lib/asterisk
 chmod -R 750 /var/spool/asterisk
 
 cd /
