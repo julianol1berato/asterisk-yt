@@ -17,7 +17,7 @@ apt-get install --yes -qq --no-install-recommends --no-install-suggests \
   postgresql-server-dev-15 \
   postgresql \
   unixodbc-dev unixodbc  \
-> /dev/null
+1> /dev/null
 
 echo "Install packages"
 DEBIAN_FRONTEND=noninteractive \
@@ -76,7 +76,7 @@ apt-get install --yes -qq --no-install-recommends --no-install-suggests \
   cmake \
   libtool \
   libpcap-dev \
-> /dev/null
+1> /dev/null
 
 apt-get purge --yes -qq --auto-remove > /dev/null
 rm -rf /var/lib/apt/lists/*
@@ -166,9 +166,9 @@ menuselect/menuselect \
     --disable res_phoneprov \
     --disable res_pjsip_phoneprov_provider
     
-make install > /dev/null
-make install-headers > /dev/null
-make config > /dev/null
+make install 1> /dev/null
+make install-headers 1> /dev/null
+make config 1> /dev/null
 ldconfig
 echo "---------- END build ----------" 
 
@@ -236,5 +236,5 @@ DEBIAN_FRONTEND=noninteractive apt-get --yes -qq purge \
   pkg-config \
   xz-utils \
   ${DEVPKGS} \
-> /dev/null
+1> /dev/null
 rm -rf /var/lib/apt/lists/*
