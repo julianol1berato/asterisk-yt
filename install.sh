@@ -29,6 +29,9 @@ apt-get install --yes -qq --no-install-recommends --no-install-suggests \
   make \
   gcc \
   g++ \
+  git \
+  bpytop\
+  htop \
   unixodbc \
   unixodbc-dev \
   wget \
