@@ -1,7 +1,7 @@
 # Repositório das Aulas de Asterisk do YouTube - @9LEVEL_TI
 > Git dedicado as aulas do YouTube.
 
-[Canal Youtube @analistabash](https://www.youtube.com/channel/UCR7T-wjzHUF6g78pUN-c6JQ/videos)
+[Canal Youtube @9LEVEL_TI](https://www.youtube.com/channel/UCR7T-wjzHUF6g78pUN-c6JQ/videos)
 
 
 - [DUMP Database](sql/dump-mysql.sql)
