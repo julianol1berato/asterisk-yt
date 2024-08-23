@@ -8,6 +8,17 @@ echo "Update System"
 DEBIAN_FRONTEND=noninteractive \
 apt-get update -qq
 
+
+echo "installing postgres base"
+
+apt-get install --yes -qq --no-install-recommends --no-install-suggests \
+  postgresql-client \
+  postgresql-contrib \
+  postgresql-server-dev-15 \
+  postgresql \
+  unixodbc-dev unixodbc  \
+1> /dev/null
+
 echo "Install packages"
 DEBIAN_FRONTEND=noninteractive \
 apt-get install --yes -qq --no-install-recommends --no-install-suggests \
@@ -18,6 +29,9 @@ apt-get install --yes -qq --no-install-recommends --no-install-suggests \
   make \
   gcc \
   g++ \
+  git \
+  bpytop\
+  htop \
   unixodbc \
   unixodbc-dev \
   wget \
@@ -65,19 +79,24 @@ apt-get install --yes -qq --no-install-recommends --no-install-suggests \
   cmake \
   libtool \
   libpcap-dev \
-> /dev/null
+1> /dev/null
 
 apt-get purge --yes -qq --auto-remove > /dev/null
 rm -rf /var/lib/apt/lists/*
 mkdir -p /usr/src/asterisk
 cd /usr/src/asterisk
 curl -sL http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-20-current.tar.gz | tar --strip-components 1 -xz
-echo "Install source mp3"
-./contrib/scripts/get_mp3_source.sh && \
-contrib/scripts/install_prereq install && \
-./configure --prefix=/usr --libdir=/usr/lib --with-pjproject-bundled --with-jansson-bundled --with-resample --with-ssl=ssl --with-srtp > /dev/null
-: ${JOBS:=$(( $(nproc) + $(nproc) / 2 ))}
 
+
+echo "Install source mp3"
+./contrib/scripts/get_mp3_source.sh > /dev/null
+contrib/scripts/install_prereq install > /dev/null
+
+echo "configure de asterisk"
+./configure --prefix=/usr --libdir=/usr/lib --with-pjproject-bundled --with-jansson-bundled --with-resample --with-ssl=ssl --with-srtp 
+
+
+echo "makes do asterisk"
 make menuselect/menuselect menuselect-tree menuselect.makeopts && \
   menuselect/menuselect \
     --enable-category MENUSELECT_ADDONS \
@@ -149,11 +168,10 @@ menuselect/menuselect \
     --disable res_config_sqlite3 \
     --disable res_phoneprov \
     --disable res_pjsip_phoneprov_provider
-make -j ${JOBS} all > /dev/null || make -j ${JOBS} all
-make install > /dev/null
-make install-headers > /dev/null
-make config > /dev/null
-make samples > /dev/null
+    
+make install 1> /dev/null
+make install-headers 1> /dev/null
+make config 1> /dev/null
 ldconfig
 echo "---------- END build ----------" 
 
@@ -187,6 +205,8 @@ echo "---------- END build ----------"
 
 sed -i -E 's/^;(run)(user|group)/\1\2/' /etc/asterisk/asterisk.conf
 
+
+echo "instalando codecs"
 mkdir -p /usr/src/codecs/opus
 cd /usr/src/codecs/opus
 curl -sL http://downloads.digium.com/pub/telephony/codec_opus/asterisk-16.0/x86-64/codec_opus-16.0_current-x86_64.tar.gz | tar xz --strip 1 
@@ -199,9 +219,9 @@ mkdir -p /etc/asterisk/ \
 sudo groupadd asterisk
 sudo useradd -r -d /var/lib/asterisk -g asterisk asterisk
 sudo usermod -aG audio,dialout asterisk
-sudo chown -R asterisk.asterisk /etc/asterisk
-sudo chown -R asterisk.asterisk /var/{lib,log,spool}/asterisk
-sudo chown -R asterisk.asterisk /usr/lib/asterisk
+sudo chown -R asterisk:asterisk /etc/asterisk
+sudo chown -R asterisk:asterisk /var/{lib,log,spool}/asterisk
+sudo chown -R asterisk:asterisk /usr/lib/asterisk
 chmod -R 750 /var/spool/asterisk
 
 cd /
@@ -221,5 +241,5 @@ DEBIAN_FRONTEND=noninteractive apt-get --yes -qq purge \
   pkg-config \
   xz-utils \
   ${DEVPKGS} \
-> /dev/null
+1> /dev/null
 rm -rf /var/lib/apt/lists/*
