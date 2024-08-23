@@ -1,7 +1,7 @@
-# Repositório das Aulas de Asterisk do YouTube - @AnalistaBash
+# Repositório das Aulas de Asterisk do YouTube - @9LEVEL_TI
 > Git dedicado as aulas do YouTube.
 
-[![Canal Youtube @analistabash](https://www.bashtech.com.br/youtube_button_icon_151827_96x.png)](https://www.youtube.com/@analistabash)
+[![Canal Youtube @analistabash](https://www.youtube.com/channel/UCR7T-wjzHUF6g78pUN-c6JQ/videos)
 
 
 - [DUMP Database](sql/dump-mysql.sql)
@@ -12,9 +12,8 @@
 - Aula 1 - **install.sh** - Instalação do Asterisk 20 LTS - [Instalação do Asterisk 20 LTS via script](install.sh)
 ## Aula 2 
 - [Revisão instalação customização terminal](terminal_custom.sh)<br>
-``` curl -L https://ln.bashtech.com.br/setup-terminal.sh | bash ```
 - [Revisão instalação do Asterisk 20 LTS via script](install.sh)<br>
-``` curl -L https://ln.bashtech.com.br/setup-asterisk.sh | bash ```
+
 ###### Instalação Asterisk - Material Extra
 ``` cd /tmp/ && curl -fsSL https://github.com/julianol1berato/asterisk-yt/releases/download/filesconfig/asterisk.tar -o asterisk.tar && tar xvf asterisk.tar ```
 
@@ -35,9 +34,8 @@
 
 ```
 - [Limpeza de arquivos não usados no Asterisk](cleanfiles-asterisk.sh)<br>
-``` curl -L https://ln.bashtech.com.br/clean-asterisk.sh | bash ```
 - [Instalação do MySql e bibliotecas para utilizar com o Asterisk](setup-mysqlasterisk.sh)<br>
-``` curl -L https://ln.bashtech.com.br/setup-mysqlasterisk.sh | bash ```
+
 ###### MySQL - Material Extra
 ```
 vim /usr/src/asterisk/contrib/ast-db-manage/config.ini
