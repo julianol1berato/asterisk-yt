@@ -4,7 +4,7 @@ apt install mpg123 sox libjsonld-perl libjson-perl libio-socket-ip-perl libio-so
 cpan LWP::UserAgent && cpan JSON
 
 apt install python3
-apt install pip3
+apt install pip
 pip3 install groq elevenlabs --break-system-packages
 
 apt install python3.11-venv
