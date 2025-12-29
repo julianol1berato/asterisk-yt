@@ -1,0 +1,12 @@
+
+
+
+
+source venv/bin/activate
+alembic -c config.ini upgrade head --sql > /tmp/asterisk_schema.sql
+docker cp /tmp/asterisk_schema.sql postgres-asterisk-dev:/tmp/
+docker exec -it postgres-asterisk-dev psql -U asterisk-dev -d asterisk-dev -f /tmp/asterisk_schema.sql
+
+alembic -c config.ini stamp head
+
+
